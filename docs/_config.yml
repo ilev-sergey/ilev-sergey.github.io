@@ -1,15 +1,69 @@
-title: Your awesome title
-description: >-
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+permalink: /:categories/:title
+description: Hi, my name is Sergey, that's my personal website.
 
-email: your-email@example.com
-github_username:  jekyll
+author:
+  name: Sergey Ilev
+  avatar : /assets/images/avatar.png
+  bio: &bio MIPT student, Bachelor's degree, Applied Maths and Physics
+  location: Moscow, Russia
+  links: &links
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/ilev-sergey"
+    - label: "Telegram"
+      icon: "fab fa-fw fa-telegram"
+      url: "https://t.me/Nidetag"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin-in"
+      url: "https://www.linkedin.com/in/ilev-sergey/"
+    - label: "ilev-sergey@yandex.ru"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:ilev-sergey@yandex.ru"
+
+footer:
+  links: *links
 
 remote_theme: "mmistakes/minimal-mistakes"
 plugins:
   - jekyll-include-cache
+
+include:
+  - _pages
+
+paginate: 5
+paginate_path: /page:num/
+breadcrumbs: true
+search: true
+atom_feed:
+  hide: true
+
+teaser: /assets/images/teaser.jpg
+og_image: /assets/images/logo.png
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      read_time: true
+      related: true
+      show_date: true
+      author_profile: true
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
