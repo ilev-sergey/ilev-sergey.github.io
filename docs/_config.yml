@@ -39,6 +39,9 @@ search: true
 atom_feed:
   hide: true
 
+kramdown:
+  math_engine: katex
+
 teaser: /assets/images/teaser.jpg
 og_image: /assets/images/logo.png
 
