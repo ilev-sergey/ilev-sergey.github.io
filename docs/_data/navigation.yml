@@ -7,3 +7,5 @@ main:
     url: /tags/
   - title: "repository"
     url: https://github.com/ilev-sergey/ilev-sergey.github.io
+  - title: "cv"
+    url: /cv/Sergey_Ilyev_CV.pdf
